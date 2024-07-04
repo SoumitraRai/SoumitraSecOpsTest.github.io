@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVE Records</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CVE Records</h1>
+        <button id="addCveBtn">Add CVE</button>
+        <input type="text" id="filterInput" placeholder="Filter CVE records..." onkeyup="filterRecords()">
+        <table id="cveTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable('cveId')">CVE-ID</th>
+                    <th onclick="sortTable('severity')">Severity</th>
+                    <th onclick="sortTable('cvss')">CVSS</th>
+                    <th onclick="sortTable('affectedPackages')">Affected Packages</th>
+                    <th onclick="sortTable('cweId')">CWE-ID</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="cveTableBody">
+                <!-- Rows will be added dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div id="cveModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Add CVE</h2>
+            <form id="cveForm">
+                <label for="cveId">CVE-ID:</label>
+                <input type="text" id="cveId" name="cveId" required>
+                <label for="severity">Severity:</label>
+                <input type="text" id="severity" name="severity" required>
+                <label for="cvss">CVSS:</label>
+                <input type="number" step="0.1" id="cvss" name="cvss" required>
+                <label for="affectedPackages">Affected Packages:</label>
+                <input type="text" id="affectedPackages" name="affectedPackages" required>
+                <label for="cweId">CWE-ID:</label>
+                <input type="text" id="cweId" name="cweId" required>
+                <button type="submit" id="saveBtn">Save</button>
+                <button type="button" id="cancelBtn">Cancel</button>
+            </form>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
