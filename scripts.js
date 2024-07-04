@@ -10,9 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalTitle = document.getElementById('modalTitle');
     const filterInput = document.getElementById('filterInput');
 
-    let cveRecords = [
-        { cveId: 'CVE-2021-34527', severity: 'High', cvss: 9.8, affectedPackages: 'Windows', cweId: 'CWE-94' },
-        { cveId: 'CVE-2020-1472', severity: 'Critical', cvss: 10.0, affectedPackages: 'Netlogon', cweId: 'CWE-269' },
+    let cveRecords = [{ cveId: 'CVE-2021-32628', severity: 'High', cvss: 7.5, affectedPackages: 'redis-server, redis-tools', cweId: 'CWE-190' },
+        { cveId: 'CVE-2016-1585', severity: 'Critical', cvss: 9.8, affectedPackages: 'apparmor, libapparmor1', cweId: 'CWE-254' },
+        { cveId: 'CVE-2021-20308', severity: 'Critical', cvss: 9.8, affectedPackages: 'htmldoc, htmldoc-common', cweId: 'CWE-190' },
+        { cveId: 'CVE-2021-4048', severity: 'Critical', cvss: 9.8, affectedPackages: 'libblas3', cweId: 'CWE-125' },
+        { cveId: 'CVE-2022-36227', severity: 'Critical', cvss: 9.8, affectedPackages: 'libarchive13', cweId: 'CWE-476' },
+        { cveId: 'CVE-2021-3697', severity: 'High', cvss: 7, affectedPackages: 'grub-common, grub-pc, grub-pc-bin, grub2-common', cweId: 'CWE-787' },
+        { cveId: 'CVE-2021-38091', severity: 'High', cvss: 8.8, affectedPackages: 'libavcodec58, libavutil56, libswresample3', cweId: 'CWE-190' },
+        { cveId: 'CVE-2016-2781', severity: 'Medium', cvss: 6.5, affectedPackages: 'coreutils', cweId: 'CWE-20' },
+        { cveId: 'CVE-2016-9802', severity: 'Medium', cvss: 5.3, affectedPackages: 'bluez, libbluetooth3', cweId: 'CWE-119' },
+        { cveId: 'CVE-2019-1563', severity: 'Low', cvss: 3.7, affectedPackages: 'libnode72', cweId: 'CWE-327' }
         // Add more CVE records here
     ];
 
